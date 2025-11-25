@@ -1,0 +1,29 @@
+Balloon Adventure – High Sky Escape
+
+Scenario:
+Embark on a whimsical hot-air balloon adventure. The player’s goal is to soar as high as possible into the sky to collect points (or stars), but they must land the balloon before it pops in the thin atmosphere. As the balloon ascends, tension builds: the higher you go, the more points you earn, but the greater the risk of a sudden pop from strong winds or high altitude.
+
+Technical Breakdown:
+
+PixiJS Scene: Use PixiJS to render a sky background (e.g. blue sky with clouds) and a balloo (which can be a simple image or shape). Ensure efficient layering: background, balloon, and UI overlay (score, buttons).
+Animation & Timing: Implement a game loop (using PIXI.Ticker or similar) that gradually moves the balloon upward. Use smooth tweening for the balloon’s ascent and subtle swaying motion (to mimic wind) for visual polish. The altitude/score should increase over time as the balloon rises.
+User Interaction: Provide a “Land Now” button (or a similar action, e.g. tapping the balloon) that lets the player safely descend and end the run. This is the timed action – the user must decide when to tap before disaster strikes. On landing, display a success message with the points collected. If the player doesn’t land in time and a random pop event occurs, show a balloon burst animation(shape change or image change).
+Randomized Risk: Simulate the unpredictable “crash” mechanic by triggering a balloon pop at a random time or altitude threshold (after a minimum safe period). This keeps the player guessing and reproduces the tension of rising risk. Ensure the random event is truly unpredictable each run.
+UI & Feedback: Overlay a score/altitude meter that updates in real-time as you ascend. Include basic controls UI (the Land button) and possibly a visual indicator of risk (e.g. the balloon changing color or shaking when it’s dangerously high). Use layering in PixiJS to keep UI elements (score text, button) fixed on top while the balloon and background animate under.
+
+
+
+| Element | Shape suggestion             | Notes                                               |
+|---------|------------------------------|-----------------------------------------------------|
+| Balloon | circle + small rectangle     | slight sine-wave wiggle to simulate wind            |
+| Clouds  | semi-transparent ellipses    | parallax scroll for depth                           |
+| Score   | PIXI.Text                    | updates by frame                                    |
+| Button  | rounded rectangle            | darken on hover / touch                             |
+
+
+Bonus Goals (Optional, Not required):
+
+Dynamic Visual Effects: Add particle effects for extra flair – e.g. sparkles or confetti when the balloon safely lands, and a burst of “pop” particles when it explodes. This can be done with PixiJS particle containers or a lightweight particle library.
+Audio Feedback: Incorporate sound effects – a gentle wind background sound, a “pop” sound on balloon burst, and maybe a fanfare on safe landing. Audio enhances the feedback loop and user immersion. PIXI.sound.
+Responsive & Mobile-Friendly: Ensure the game canvas scales to different screen sizes. Support touch input for the Land button (so the game can be played on mobile devices).
+Polish & UX: Add a start screen or “Play Again” prompt after each round. You could also gradually increase balloon ascent speed or add more clouds at higher altitudes to intensify the feeling of speed and risk. 
