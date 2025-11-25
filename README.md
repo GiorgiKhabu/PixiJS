@@ -1,5 +1,5 @@
-#🎈 Balloon Ascend — Pixi.js Mini-Game
-##🚀 Getting Started
+# 🎈 Balloon Ascend — Pixi.js Mini-Game
+## 🚀 Getting Started
 
 To run the project locally:
 
@@ -18,7 +18,7 @@ npx vite
 Open the game in your browser:
 http://localhost:5173/
 
-##🕹️ About the Game
+## 🕹️ About the Game
 
 This is a simple mini-game built using Pixi.js.
 
@@ -27,8 +27,8 @@ As you climb higher, your score increases, but so does the risk of the balloon p
 
 Your goal is to land safely before it bursts.
 
-###⬆️ Higher altitude = more points
+### ⬆️ Higher altitude = more points
 
-###⚠️ Staying too high for too long increases danger
+### ⚠️ Staying too high for too long increases danger
 
-###🛬 Land on time to survive and keep your score
+### 🛬 Land on time to survive and keep your score
